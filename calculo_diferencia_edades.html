@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="es-419">
+        <meta charset="utf-8" />
+        <title>Ejercicio diferencia de edades</title>
+    </head>
+    <body>
+
+        <h2>Cálculo diferencia de edades</h2>
+
+        <script>
+           
+            function saltarLinea() {//función para imprimir saltos de línea sin parámetros de entrada
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            function imprimir(frase) {//función para escribir texto en la página web (reemplaza document.write)
+                document.write(frase);
+            }
+
+            var edadHermano=42;
+            var miEdad=36;
+            var año=2022;
+            var diferenciaEdad=edadHermano-miEdad;
+
+            imprimir("Mi hermano tiene "+ edadHermano + " años.");
+            saltarLinea();
+            imprimir("Yo tengo "+ miEdad + " años.");
+            saltarLinea();
+            imprimir("La diferencia de edad es "+ diferenciaEdad + " años.");
+        </script>
+
+    </body>
+</html>        
