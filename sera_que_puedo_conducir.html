@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="es-419">
+        <meta charset="utf-8" />
+        <title>Comprobar si puede tener licencia de conducir</title>
+    </head>
+    
+    <body>
+        <h1>¿Será que puedo conducir?</h1>
+        <script>
+            function saltarLinea() {
+                document.write("<br>")
+            }
+
+            function imprimir(frase) {
+
+                document.write(frase);
+                saltarLinea();
+            }
+
+            var edad = parseInt(prompt("¿Cuál es tu edad?"));
+            
+
+            if (edad>=18) {
+                var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+                if (tieneLicencia == "S" || tieneLicencia == "s") {
+                    imprimir("Usted puede conducir");
+                } else {
+                imprimir("Usted no puede conducir");
+                }
+            } else {
+                imprimir("Usted no puede conducir");
+            }
+            
+        </script>
+    </body>
+</html>
+  
