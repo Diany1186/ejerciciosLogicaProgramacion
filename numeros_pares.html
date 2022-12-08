@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="es-419">
+        <meta charset="utf-8" />
+        <title>EJercicio números pares</title>
+    </head>
+    <body>
+
+        <h2>Números pares del 1 al 100</h2>
+
+        <script>
+            /*Usando la instrucción while, imprime todos los números pares del 1 al 100 y al final imprime la palabra "FIN".*/          
+
+            function saltarLinea() {//función para imprimir saltos de línea sin parámetros de entrada
+                document.write("<br>");
+            }
+
+            function imprimir(frase) {//función para escribir texto en la página web (reemplaza document.write) y añade dos saltos de línea
+                document.write(frase);
+                saltarLinea();
+            }
+            
+            var numero = 0;
+
+            while (numero<100) {
+                numero=numero +2;
+                imprimir(numero);
+            }
+
+        </script>
+
+    </body>
+</html>        
