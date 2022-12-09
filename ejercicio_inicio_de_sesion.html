@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="es-419">
+        <meta charset="utf-8" />
+        <title>Ejercicio inicio de sesión</title>
+    </head>
+    
+    <body>
+        <h1 id="encabezado">Sistema Alura</h1>
+        <script>
+
+            var inicioDeSesionRegistrado = "alura";
+            var contrasenhaRegistrada = "alura321";         
+            
+            for (var contador=1;contador <=3;contador++) {
+                
+                var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+                var contrasenhaIngresada = prompt("Ingrese su contraseña");
+                
+                if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+                    alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                    break;
+                } else {
+                    
+                    if (contador < 3){
+                        
+                        alert("Inicio de sesión inválido. Favor intente de nuevo, le quedan " + (3-contador)+ " intentos");
+                        
+                    } else {
+                        
+                        alert("Inicio de sesión inválido. Se ha quedado sin intentos");
+                        document.write("Sistema bloqueado");
+                    }
+                }
+            }
+
+            
+    </script>
+        </body>
+</html>
