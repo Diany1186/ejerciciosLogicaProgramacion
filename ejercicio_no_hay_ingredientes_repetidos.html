@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="es-419">
+        <meta charset="utf-8" />
+        <title>Verificar ingredientes repetidos</title>
+    </head>
+    
+    <body>
+        
+        <h1>Recetas de Armando</h1>
+        
+        <script>
+        
+            var ingredientes = [];
+            var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+            var contador = 1;
+        
+            while( contador <= cantidad) {
+                var ingrediente = prompt("Informe el ingrediente " + contador);
+                console.log(ingredientes);
+                var encontrado = false;
+                
+                for (var posiscion=0;posiscion < ingredientes.length;posiscion++) {
+                            
+                    if (ingrediente == ingredientes[posiscion]) {
+                        encontrado=true;
+                        alert("Este ingrediente ya se ha ingresado anteriormente, por favor ingrese otro ingrediente")
+                        break;
+                    }
+                }
+                if (encontrado == false) {
+                    ingredientes.push(ingrediente);
+                    contador++;
+                }
+                
+            }
+
+        </script>  
+    </body>
+</html>
