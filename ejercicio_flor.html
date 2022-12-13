@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    }
+     //coordenadas centrales X=300 y Y=200
+     function dibujarFlor(x,y,radio) {//dibuja una flor dado las coordenadas x e y del círculo central, y el radio
+        
+        dibujarCirculo(x,y,radio,"red");
+        dibujarCirculo(x-2*radio,y,radio,"orange");
+        dibujarCirculo(x+2*radio,y,radio,"black");
+        dibujarCirculo(x,y-2*radio,radio,"yellow");
+        dibujarCirculo(x,y+2*radio,radio,"blue");
+     }
+     
+     dibujarFlor(300,200,20);
+
+</script>
